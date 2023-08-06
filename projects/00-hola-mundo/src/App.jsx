@@ -1,17 +1,15 @@
-export function App () {
+import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard'
+export function App() {
+    //const format = (userName) => `@${userName}`
+    
     return (
-        <article style={{ display: 'flex', color: '#fff'}}>
-            <header>
-                <img src="https://png.pngtree.com/png-vector/20220817/ourmid/pngtree-cartoon-man-avatar-vector-ilustration-png-image_6111064.png" alt="" />
-                <div>
-                    <strong>midudev</strong>
-                </div>
-            </header>
-            <aside>
-                <button>
-                    Segir
-                </button>
-            </aside>
-        </article>
+        //<article style={{ display: 'flex', alignItems: 'center', color: '#fff'}}>
+        <section className='App'>
+            <TwitterFollowCard isFollowing userName="alx" name="Gabriel"/>
+            <TwitterFollowCard isFollowing={false} userName="pheralb" name="Pablo Hernandez"/>
+            <TwitterFollowCard isFollowing userName="elonmusk" name="Elon Musk"/>
+            <TwitterFollowCard isFollowing userName="vxnder" name="Vanderhart" />
+        </section>
     )
 }
