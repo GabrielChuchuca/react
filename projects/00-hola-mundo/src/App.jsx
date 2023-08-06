@@ -6,7 +6,7 @@ export function App() {
     return (
         //<article style={{ display: 'flex', alignItems: 'center', color: '#fff'}}>
         <section className='App'>
-            <TwitterFollowCard userName="alx">Gabriel</TwitterFollowCard>
+            <TwitterFollowCard userName="alx" initialIsFollowing={true}>Gabriel</TwitterFollowCard>
             <TwitterFollowCard userName="pheralb">Pablo Hernandez</TwitterFollowCard>
         </section>
     )
