@@ -1,10 +1,10 @@
-import { useState } from "react"
-import confetti from "canvas-confetti"
-import { Square } from "./components/Square"
+import { useEffect, useState } from 'react'
+import confetti from 'canvas-confetti'
+import { Square } from './components/Square'
 import { TURNS } from './constants'
-import { checkEndGame, checkWinnerFrom } from "./logic/board"
-import { WinnerModal } from "./components/WinnerModal"
-import { resetGameStorage, saveGametostorage } from "./logic/storage"
+import { checkEndGame, checkWinnerFrom } from './logic/board'
+import { WinnerModal } from './components/WinnerModal'
+import { resetGameStorage, saveGametostorage } from './logic/storage'
 
 
 function App() {
@@ -55,6 +55,10 @@ function App() {
       setWinner(false)
     }
   }
+
+  useEffect(() => {
+    console.log('useEffect');
+  })
 
   return(
     <main className="board">
